@@ -1,0 +1,55 @@
+:root{
+    /*ACÁ ESTEBLECEREMOS VARIABLES CON ALCANCE TOTAL*/
+
+    /*Variables de COLOR*/
+    --azul-marino-oscuro:#0F2D34;
+    --azul-medio-oscuro:#1E2F59;
+    --azul-estandar:#115B90;
+    --morado-estandar:#9550B9;
+    --celeste-claro:#42ECF1;
+    --amarillo-claro:#F5F0A1;
+
+}
+
+    /*Reseteo de la pagina...*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--azul-marino-oscuro);
+    color: var(--amarillo-claro);
+}
+
+header .logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: var(--amarillo-claro);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover{
+    color: var(--celeste-claro);
+}

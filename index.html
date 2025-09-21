@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <!-- Head: es la parte de informacion de la pagina web basicamente, es informacion no visible.-->
 <head>
@@ -7,23 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Etiqueta title: define el titulo de la pestaña -->
     <title>Mi Sitio Web</title>
+    <link rel="stylesheet" href="estilos/estilos.css">
     
 </head>
 
 <!-- Body: toda la informacion visible de la pagina web-->
 <body>
-    <h1>Mi Sitio Web</h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dolore illum eos officiis. Quisquam culpa rerum, fugit saepe id, libero tenetur soluta sunt obcaecati ullam minima ut est quaerat asperiores.
-    </p>
-    <!-- Etiqueta a: Basicamente es la etiqueta de los enlaces.-->
-    <!-- El atributo href: es una referencia de hipertexto -->
-    <a href="inicio.html" title="Bienvenido a mi sitio web">Inicio</a>
-    <a href="acerca_de_mi.html" title="Conoce mas acerca de mi">Acerca de Mi</a>
-    <a href="diario_visual.html" title="Observa mi diario visual">Diario Visual</a>
-    <a href="mis_ideas.html" title="Conoce mas mis ideas">Mis Ideas</a>
-    <a href="contacto.html" title="Accede a mi Contacto">Contacto</a>
-    
+    <div class="contenedor">
+        <!-- MI HEADER tecnicamente... -->
+        <header>
+            <div class="logo">Mi Sitio Web</div>
+            <nav>
+                <ul>
+                    <li><a href="inicio.html" title="Bienvenido a mi sitio web">Inicio</a></li>
+                    <li><a href="acerca_de_mi.html" title="Conoce mas acerca de mi">Acerca de Mi</a></li>
+                    <li><a href="diario_visual.html" title="Observa mi diario visual">Diario Visual</a></li>
+                    <li><a href="mis_ideas.html" title="Conoce mas mis ideas">Mis Ideas</a></li>
+                    <li><a href="contacto.html" title="Accede a mi Contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- PARTE PRINCIPAL -->
+        <main class="hero">
+            <div class="texto-izquierda">
+                <h1>Bienvenidos a mi Mundo</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab culpa impedit sunt dolore quia alias deleniti, sed doloremque quo eligendi placeat quidem eius sapiente recusandae? Rerum quidem sint neque illo!</p>
+                <a href="mis_ideas.html" class="boton">Explora Mis Ideas</a>
+            </div>
+            <div class="imagen-derecha">
+                <img src="imagenes/imagen-prueba.jpeg" alt="Imagen Lateral principal">
+            </div>
+        </main>
+
+    </div>
+
 </body>
 </html>
 <!-- y -->
