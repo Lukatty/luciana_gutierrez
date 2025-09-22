@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+
 :root{
     /*ACÁ ESTEBLECEREMOS VARIABLES CON ALCANCE TOTAL*/
 
@@ -9,6 +12,26 @@
     --celeste-claro:#42ECF1;
     --amarillo-claro:#F5F0A1;
 
+    /*ESCALA TIPOGRÁFICA*/
+
+    --h1:47.78px;
+    --h2:39.81px;
+    --h3:33.18px;
+    --h4:27.65px;
+    --h5:23.04px;
+    --h6:19.2px;
+    --p:16px;
+    --sm:13.33px;
+    --xsm:11.11px;
+
+    --Mukta-sans-serif: "Mukta", sans-serif;
+
+    /*ESPACIOS*/
+    --padding-1: 17px;     /*medida estandar*/
+    --padding-2: 50px;     /*3 x 17 - 1*/
+    --gap-1: 16px;     /*espaciador entre elementos pequeños*/
+    --gap-2: 50px;   /*espaciedor para header nav y lista*/  
+
 }
 
     /*Reseteo de la pagina...*/
@@ -16,8 +39,79 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
 }
+
+    /*Implementacion de la tipografia y tamaños*/
+
+body{
+    background-color: var(--azul-estandar);
+    font-family: var(--Mukta-sans-serif);
+}
+
+h1{
+font-family: var(--Mukta-sans-serif);
+font-size: var(--h1);
+font-weight: 800;     /*Extrabold*/
+
+}
+h2{
+font-family: var(--Mukta-sans-serif);
+font-size: var(--h2);
+font-weight: 700;    /*bold*/
+
+}
+h3{
+font-family: var(--Mukta-sans-serif);
+font-size: var(--h3);
+font-weight: 600;     /*semi bold*/
+
+}
+h4{
+font-family: var(--Mukta-sans-serif);
+font-size: var(--h4);
+font-weight: 500;     /*medium*/
+text-transform: uppercase;
+}
+h5{
+    font-family: var(--Mukta-sans-serif);
+font-size: var(--h5);
+font-weight: 400;     /*regular*/
+text-transform: uppercase;
+}
+h6{
+font-family: var(--Mukta-sans-serif);
+font-size: var(--h6);
+font-weight: 300;     /*ligth*/
+text-transform: uppercase;
+}
+p{
+    font-family: var(--Mukta-sans-serif);
+    font-size: var(--p);
+    font-weight: 300;      /*ligth*/
+}
+
+.sm{
+font-family: var(--Mukta-sans-serif);
+font-size: var(--sm);
+font-weight: 200;     /*extralight*/
+text-transform: uppercase;
+
+}
+.xsm{
+    font-family: var(--Mukta-sans-serif);
+font-size: var(--xsm);
+font-weight: 200;     /*extralight*/
+
+text-transform: uppercase;
+}
+.italic{
+font-style:italic;
+}
+.bold{
+font-weight: 700;
+}
+    /*Fin a lo de la tipografia*/
+
 
 .contenedor{
     width: 100%;
@@ -40,7 +134,7 @@ header .logo{
 header nav ul{
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: var(--gap-2);
 }
 
 header nav ul li a{
@@ -52,4 +146,40 @@ header nav ul li a{
 
 header nav ul li a:hover{
     color: var(--celeste-claro);
+}
+
+    /*Ahora el hero*/
+.hero{
+    height: 100vh;
+    background-image: url("/imagenes/imagen-prueba.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: var(--padding-2);
+    color: var(--celeste-claro);
+    text-shadow: 1px 1px 5px black;
+}
+
+.hero h1{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero p{
+    max-width: 600px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+
+.boton{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--morado-estandar);
+    color: var(--amarillo-claro);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
 }
