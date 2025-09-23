@@ -41,12 +41,59 @@
     box-sizing: border-box;
 }
 
+    /*INICIO de Implementacion FONDOS*/
     /*Implementacion de la tipografia y tamaños*/
 
+
 body{
-    background-color: var(--azul-estandar);
+    background-color: var(--azul-marino-oscuro);
     font-family: var(--Mukta-sans-serif);
 }
+
+body.fondo-index {
+    background-image: url("../imagenes/fondo-pa-index.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+body.fondo-inicio {
+    background-image: url("../imagenes/fondo-pa-inicio.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+body.fondo-contacto {
+    background-image: url("../imagenes/fondo-pa-contacto.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+body.fondo-acercademi {
+    background-image: url("../imagenes/fondo-pa-acercademi.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+body.fondo-diario {
+    background-image: url("../imagenes/fondo-pa-diario.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+body.fondo-misideas {
+    background-image: url("../imagenes/fondo-pa-misideas.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+    /*FIN de Implementacion FONDOS*/
+
 
 h1{
 font-family: var(--Mukta-sans-serif);
@@ -113,17 +160,27 @@ font-weight: 700;
     /*Fin a lo de la tipografia*/
 
 
+/*INICIO ARCHIVO INDEX*/
 .contenedor{
     width: 100%;
 }
 
+/*INICIO HEADER*/
+
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: var(--azul-marino-oscuro);
+
+    background-color: rgb(15, 45, 52, 0.7); /*para la transparencia del header uwu*/
+    backdrop-filter: blur(5px);
     color: var(--amarillo-claro);
+    z-index: 1000;
 }
 
 header .logo{
@@ -148,7 +205,9 @@ header nav ul li a:hover{
     color: var(--celeste-claro);
 }
 
-    /*Ahora el hero*/
+/*FIN HEADER*/
+
+/*INICIO HERO*/
 .hero{
     height: 100vh;
     background-image: url("/imagenes/imagen-prueba.jpeg");
@@ -168,10 +227,13 @@ header nav ul li a:hover{
     margin-bottom: 20px;
 }
 .hero p{
+    font-family: var(--Mukta-sans-serif);
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.5;
     max-width: 600px;
     margin-bottom: 20px;
-    line-height: 1.5;
-    font-size: 1.1rem;
+    color: var(--celeste-claro);
 }
 
 .boton{
@@ -183,3 +245,47 @@ header nav ul li a:hover{
     border-radius: 8px;
     transition: background-color 0.3s, transform 0.3s;
 }
+.boton:hover{
+    filter: brightness(85%);
+    transform: translateY(-2px);
+}
+/*FIN ARCHIVO INDEX*/
+
+/*INICIO ARCHIVO INICIO*/
+.hero-inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 20px;
+    height: 100vh;
+}
+.hero-inicio .texto-central{
+    background-color: rgb(15, 45, 52, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 30px 50px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--amarillo-claro);
+    box-sizing: border-box;
+}
+.hero-inicio h2{
+    font-size: var(--h2);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.hero-inicio p{
+    font-size: var(--p);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.hero-inicio h6{
+    font-family: var(--Mukta-sans-serif);
+    font-size: var(--h6);
+    font-weight: 700;
+    text-transform: none;
+}
+
+
