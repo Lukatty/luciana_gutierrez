@@ -206,7 +206,62 @@ header nav ul li a:hover{
 }
 
 /*FIN HEADER*/
-
+/*INICIO FOOTER*/
+.footer{
+    background-color: rgba(41, 108, 123, 0.7);
+    color: var(--amarillo-claro);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid var(--amarillo-claro);
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+.footer-bloque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-1);
+}
+.footer-logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+}
+.footer-logo p{
+    margin-top: 5px;
+    font-size: var(--p);
+    font-weight: 600;
+}
+.footer-nav ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer-nav a{
+    color: var(--amarillo-claro);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-nav a:hover{
+    color: var(--celeste-claro);
+}
+.footer-redes a{
+    color: var(--amarillo-claro);
+    font-size: 24px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+.footer-redes a:hover{
+    transform: scale(1.2);
+}
+.footer-derechos p{
+    font-size: var(--p);
+    margin-top: 15px;
+}
+/*FINAL FOOTER*/
 /*INICIO HERO*/
 .hero{
     height: 100vh;
@@ -384,6 +439,158 @@ body.fondo-a-videojuegos {
     border-radius: 12px;
     border: 4px solid var(--amarillo-claro);
     box-shadow: 0 4px 10px rgb(0, 0, 0, 0, 5);
+}
+/*subcontenido mis gustos musicales, videojuegos y audiovisuales*/
+.bloque-musical-videojuegos-audiovisual{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-2);
+    background-color: rgba(41, 108, 123, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 40px 50px;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 1000px;
+    margin: 100px auto 50px auto;
+    color: var(--celeste-claro);
+    box-sizing: border-box;
+}
+.texto-musical-videojuegos-audiovisual{
+    flex: 1;
+}
+.texto-musical-videojuegos-audiovisual h2{
+    font-size: var(--h2);
+    margin-bottom: 20px;
+}
+.texto-musical-videojuegos-audiovisual p{
+    font-size: var(--p);
+    line-height: 1.6;
+}
+.imagen-musical-videojuegos-audiovisual{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.imagen-musical-videojuegos-audiovisual img{
+    width: 90%;
+    max-width: 250px;
+    border: 4px solid var(--celeste-claro);
+    border-radius: 12px;
+}
+
+/*FIN DE ARCHIVO ACERCA DE MI*/
+/*INICIO DE ARCHIVO MIS IDEAS*/
+.bloque-texto-categoria{
+    background-color: rgba(41, 108, 123, 0.7);
+    color: var(--amarillo-claro);
+    width: 85%;
+    max-width: 1000px;
+    margin: 100px auto 40px auto;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.bloque-texto-categoria:hover{
+    background-color: var(--morado-estandar);
+    transform: translateY(-5px);
+}
+.bloque-texto-categoria h2{
+    font-size: var(--h2);
+    margin-bottom: 20px;
+}
+.bloque-texto-categoria p{
+    font-size: var(--p);
+    line-height: 1.6;
+}
+/*FIN DE ARCHIVO MIS IDEAS*/
+/*INICIO DE ARCHIVO MI DIARIO VISUAL*/
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: var(--gap-1);
+    padding: 50px;
+    margin-top: 120px;
+}
+.card{
+    background-color: rgba(165, 55, 163, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    color: var(--amarillo-claro);
+    transition: transform 0.3s, background-color 0.3s;
+}
+.card:hover{
+    background-color: var(--morado-estandar);
+    transform: translateY(-5px);
+}
+.card img{
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.card h4{
+    font-size: var(--h4);
+    margin-bottom: 8px;
+}
+.card p{
+    font-size: var(--p);
+    line-height: 1.4;
+}
+/*FIN DE ARCHIVO MI DIARIO VISUAL*/
+/*INICIO DE ARCHIVO CONTACTO*/
+.contacto{
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--amarillo-claro);
+    margin-top: 100px;
+}
+.bloque-contacto{
+    background-color: rgba(41, 108, 123, 0.7);
+    padding: 40px 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.contacto h2{
+    font-size: var(--h2);
+    margin-bottom: 20px;
+}
+.contacto p{
+    font-size: var(--p);
+    line-height: 1.6;
+    margin-bottom: 30px
+}
+.info-contacto, .gmail-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.info-contacto h3, .gmail-contacto h3{
+    font-size: var(--h3);
+    margin-bottom: 10px;
+}
+.info-contacto p, .gmail-contacto p{
+    font-size: var(--p);
+    margin-bottom: 10px;
+    text-align: center;
+}
+.contacto a img{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s, ease-in-out;
+}
+.contacto a img:hover{
+    transform: scale(1.1);
 }
 
 
