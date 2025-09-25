@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!-- Head: es la parte de informacion de la pagina web basicamente, es informacion no visible.-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Etiqueta title: define el titulo de la pestaña -->
     <title>Mi Sitio Web</title>
     <link rel="stylesheet" href="estilos/estilos.css">
-    
 </head>
 
-<!-- Body: toda la informacion visible de la pagina web-->
 <body class="fondo-index">
     <div class="contenedor">
-        <!-- MI HEADER tecnicamente... -->
+        <!-- HEADER -->
         <header>
-            <div class="logo">Mi Sitio Web</div>
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="imagenes/imagen-prueba.jpeg" alt="Logo del Sitio">
+                    <span>Mi Sitio Web</span>
+                </a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="inicio.html" title="Bienvenido a mi sitio web">Inicio</a></li>
@@ -27,7 +28,6 @@
                 </ul>
             </nav>
         </header>
-
 
         <!-- PARTE PRINCIPAL -->
         <main class="hero">
@@ -40,6 +40,8 @@
                 <img src="imagenes/imagen-prueba.jpeg" alt="encabezado">
             </div>
         </main>
+
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-bloque">
                 <div class="footer-logo">
@@ -64,12 +66,9 @@
                 <div class="footer-derechos">
                     <p>© 2025 Mi Sitio Web. Todos los derechos reservados.</p>
                 </div>
-
             </div>
         </footer>
 
     </div>
-
 </body>
 </html>
-<!-- y -->

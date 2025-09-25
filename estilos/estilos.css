@@ -29,8 +29,8 @@
     /*ESPACIOS*/
     --padding-1: 17px;     /*medida estandar*/
     --padding-2: 50px;     /*3 x 17 - 1*/
-    --gap-1: 16px;     /*espaciador entre elementos pequeños*/
-    --gap-2: 50px;   /*espaciedor para header nav y lista*/  
+    --gap-1: 16px;    
+    --gap-2: 50px;   
 
 }
 
@@ -167,7 +167,8 @@ font-weight: 700;
 
 /*INICIO HEADER*/
 
-header{
+/* Header general */
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -176,34 +177,54 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-
-    background-color: rgb(15, 45, 52, 0.7); /*para la transparencia del header uwu*/
+    background-color: rgba(15, 45, 52, 0.7); 
     backdrop-filter: blur(5px);
     color: var(--amarillo-claro);
     z-index: 1000;
+
+    border-bottom: 2px solid var(--amarillo-claro); 
 }
 
-header .logo{
+/* Logo con imagen y texto */
+
+
+header .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    text-decoration: none;
+    color: var(--amarillo-claro);
+}
+
+header .logo-link img {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+}
+
+header .logo-link span {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-header nav ul{
+/* Navegación */
+header nav ul {
     list-style: none;
     display: flex;
     gap: var(--gap-2);
 }
 
-header nav ul li a{
+header nav ul li a {
     text-decoration: none;
     color: var(--amarillo-claro);
     font-weight: bold;
     transition: color 0.3s;
 }
 
-header nav ul li a:hover{
+header nav ul li a:hover {
     color: var(--celeste-claro);
 }
+
 
 /*FIN HEADER*/
 /*INICIO FOOTER*/
@@ -265,7 +286,6 @@ header nav ul li a:hover{
 /*INICIO HERO*/
 .hero{
     height: 100vh;
-    background-image: url("/imagenes/imagen-prueba.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -304,6 +324,15 @@ header nav ul li a:hover{
     filter: brightness(85%);
     transform: translateY(-2px);
 }
+.imagen-derecha img {
+    border-radius: 20px; 
+    margin-left: 60px; 
+    max-width: 1000px;
+    height: auto;    
+    display: block;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); 
+}
+
 /*FIN ARCHIVO INDEX*/
 
 /*INICIO ARCHIVO INICIO*/
@@ -409,7 +438,34 @@ body.fondo-a-videojuegos {
     min-height: 100vh;
 }
 
-/*subcontenido biografia*/
+/*boton de regreso*/
+.boton-regresar-categorias {
+    width: 85%;
+    max-width: 1000px;
+    margin: 140px auto 20px auto; 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.boton-regresar-categorias a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--amarillo-claro);
+    color: rgb(15, 45, 52);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.boton-regresar-categorias a:hover {
+    background-color: var(--morado-estandar);
+    color: #fff;
+    transform: scale(1.05);
+}
+/*boton de regreso*/
+
+
 .subcontenido-biografia{
     display: flex;
     align-items: center;
@@ -507,15 +563,15 @@ body.fondo-a-videojuegos {
 }
 /*FIN DE ARCHIVO MIS IDEAS*/
 /*INICIO DE ARCHIVO MI DIARIO VISUAL*/
-.cards{
+.cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    gap: var(--gap-1);
+    gap: var(--gap-2);
     padding: 50px;
     margin-top: 120px;
 }
-.card{
+
+.card {
     background-color: rgba(165, 55, 163, 0.7);
     backdrop-filter: blur(5px);
     padding: 15px;
@@ -523,34 +579,47 @@ body.fondo-a-videojuegos {
     text-align: center;
     color: var(--amarillo-claro);
     transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.card:hover{
+
+.card:hover {
     background-color: var(--morado-estandar);
     transform: translateY(-5px);
 }
-.card img{
-    width: 30px;
-    height: 30px;
-    border-radius: 6px;
+
+.card img {
+    width: auto;  
+    height: 250px; 
+    max-width: 100%;
+    object-fit: cover;   
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card h4 {
+    font-size: var(--h4);
     margin-bottom: 10px;
 }
-.card h4{
-    font-size: var(--h4);
-    margin-bottom: 8px;
-}
-.card p{
+
+.card p {
     font-size: var(--p);
     line-height: 1.4;
+    padding: 0 10px; 
+    text-align: center; 
 }
+
 /*FIN DE ARCHIVO MI DIARIO VISUAL*/
 /*INICIO DE ARCHIVO CONTACTO*/
-.contacto{
+.contacto {
     text-align: center;
     padding: 50px 20px;
     color: var(--amarillo-claro);
     margin-top: 100px;
 }
-.bloque-contacto{
+
+.bloque-contacto {
     background-color: rgba(41, 108, 123, 0.7);
     padding: 40px 30px;
     border-radius: 12px;
@@ -558,44 +627,53 @@ body.fondo-a-videojuegos {
     margin: auto;
     box-sizing: border-box;
 }
-.contacto h2{
+
+.contacto h2 {
     font-size: var(--h2);
     margin-bottom: 20px;
 }
-.contacto p{
+
+.contacto p {
     font-size: var(--p);
     line-height: 1.6;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    color: white;
 }
-.info-contacto, .gmail-contacto{
+
+.info-contacto, .gmail-contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
 }
-.info-contacto h3, .gmail-contacto h3{
+
+.info-contacto h3, .gmail-contacto h3 {
     font-size: var(--h3);
     margin-bottom: 10px;
 }
-.info-contacto p, .gmail-contacto p{
+
+.info-contacto p, .gmail-contacto p {
     font-size: var(--p);
     margin-bottom: 10px;
     text-align: center;
+    color: white;
 }
-.contacto a img{
+
+/* Redes sociales */
+.info-contacto .redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.info-contacto .redes a img, .gmail-contacto a img {
     width: 50px;
     height: 50px;
-    margin-top: 10px;
     border-radius: 12px;
-    transition: transform 0.3s, ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
-.contacto a img:hover{
+
+.info-contacto .redes a img:hover, .gmail-contacto a img:hover {
     transform: scale(1.1);
 }
-
-
-
-
-
-
-
